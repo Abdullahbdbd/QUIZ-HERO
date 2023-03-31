@@ -24,7 +24,7 @@ function App() {
   return (
     <div>
       <Header></Header>
-     <div className='container'>
+     <div className='container grid grid-cols-1 lg:grid-cols-2 gap-20'>
      <Container handleWatchTime={handleWatchTime}></Container>
       <Bookmark readTime={readTime}></Bookmark>
      </div>

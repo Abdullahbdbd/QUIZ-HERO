@@ -16,7 +16,7 @@ useEffect(()=>{
            <h1>Spent time on read : {time}min</h1>
         </div>
 
-        <div className='mt-5 bg-slate-200 text-6xl'>
+        <div className='mt-5 bg-slate-200 text-lg font-bold p-5 w-full h-1/3 rounded-lg'>
             <p></p>
         </div>
            
