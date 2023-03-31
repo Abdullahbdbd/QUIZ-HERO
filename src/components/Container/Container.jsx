@@ -3,14 +3,14 @@ import Blog from '../Blog/Blog';
 import Bookmark from '../Bookmark/Bookmark';
 import './Container.css'
 
-const Container = () => {
+const Container = ({handleWatchTime}) => {
     return (
         <div className='container-item ml-20 gap-4'>
             <div className='blog-container'>
-                <Blog></Blog>
+                <Blog handleWatchTime={handleWatchTime}></Blog>
             </div>
             <div className='bookmark-container'>
-                <Bookmark></Bookmark>
+           
             </div>
 
         </div>

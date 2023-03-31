@@ -3,12 +3,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBookmark } from '@fortawesome/free-solid-svg-icons'
 
 
-const BlogCart = ({blog}) => {
+const BlogCart = ({blog,handleWatchTime}) => {
     
   
     return (
         <div className='blog-cart mt-10'>
-            <img src={blog.img} alt="" />
+            <img className='rounded-lg' src={blog.img} alt="" />
 
 
             <div className='flex justify-between'>
@@ -31,7 +31,7 @@ const BlogCart = ({blog}) => {
 
 
             <h1 className='text-3xl font-bold mt-8'>{blog.title}</h1>
-           <button className='btn-mark my-10 font-bold text-purple-700'>Mark as read</button>
+           <button onClick={()=>handleWatchTime(blog.time)} className='btn-mark my-10 font-bold text-purple-700'>Mark as read</button>
            <hr />
         </div>
     );

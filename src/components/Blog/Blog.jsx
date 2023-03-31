@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import BlogCart from '../BlogCart/BlogCart';
 
-const Blog = () => {
+const Blog = ({handleWatchTime}) => {
 
     const [blogs, setBlogs] = useState([]);
 
@@ -17,7 +17,7 @@ const Blog = () => {
             <div className='blog-container'>
 
                 {blogs.map((blog) => (
-                    <BlogCart blog={blog}></BlogCart>
+                    <BlogCart handleWatchTime={handleWatchTime} blog={blog}></BlogCart>
                 ))}
             </div>
 

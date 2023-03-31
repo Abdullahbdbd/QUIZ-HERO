@@ -1,17 +1,33 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import Header from './components/Header/Header'
 import Container from './components/Container/Container'
+import Bookmark from './components/Bookmark/Bookmark'
 
 function App() {
-  const [count, setCount] = useState(0)
+  // const [count, setCount] = useState(0)
+  const [readTime, setReadTime] = useState("");
+
+  const handleWatchTime = (time) => {
+    const previousReadTime = JSON.parse(localStorage.getItem("readTime"));
+    if (previousReadTime) {
+      const sum = previousReadTime + time;
+      localStorage.setItem("readTime", sum);
+      setReadTime(sum);
+    } else {
+      localStorage.setItem("readTime", time);
+      setReadTime(time);
+    }
+
+  }
 
   return (
-    <div className="App">
+    <div>
       <Header></Header>
-      <Container></Container>
+     <div className='container'>
+     <Container handleWatchTime={handleWatchTime}></Container>
+      <Bookmark readTime={readTime}></Bookmark>
+     </div>
     </div>
   )
 }
