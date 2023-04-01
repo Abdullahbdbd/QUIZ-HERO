@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import BlogCart from '../BlogCart/BlogCart';
+import Bookmark from '../Bookmark/Bookmark';
 
-const Blog = ({handleWatchTime}) => {
+
+
+const Blog = ({handleWatchTime,addToBookmark}) => {
 
     const [blogs, setBlogs] = useState([]);
 
@@ -10,15 +13,21 @@ const Blog = ({handleWatchTime}) => {
             .then(res => res.json())
             .then(data => setBlogs(data))
 
-    }, [])
+    }, []);
 
     return (
         <div>
             <div className='blog-container'>
 
-                {blogs.map((blog) => (
-                    <BlogCart handleWatchTime={handleWatchTime} blog={blog}></BlogCart>
-                ))}
+                {blogs.map((blog) => 
+                    <div>
+                        <BlogCart addToBookmark={addToBookmark} handleWatchTime={handleWatchTime}
+                        blog={blog}
+                    ></BlogCart>
+                    
+                    </div>
+                    
+                )}
             </div>
 
         </div>
