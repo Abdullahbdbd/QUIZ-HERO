@@ -1,7 +1,5 @@
 import React from 'react';
 import Blog from '../Blog/Blog';
-import BlogCart from '../BlogCart/BlogCart';
-import Bookmark from '../Bookmark/Bookmark';
 import './Container.css'
 
 const Container = ({handleWatchTime,addToBookmark}) => {

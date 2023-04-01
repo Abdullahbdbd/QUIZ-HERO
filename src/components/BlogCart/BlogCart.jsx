@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBookmark } from '@fortawesome/free-solid-svg-icons'
-import Bookmark from '../Bookmark/Bookmark';
 
 
-const BlogCart = ({blog,handleWatchTime,addToBookmark}) => {
- 
-  
 
 
+function BlogCart({ blog, handleWatchTime, addToBookmark }) {
+
+   
     return (
         <div className='blog-cart mt-10'>
             <img className='rounded-lg' src={blog.img} alt="" />
@@ -28,18 +27,18 @@ const BlogCart = ({blog,handleWatchTime,addToBookmark}) => {
 
                 <div className='flex gap-1'>
                     <h1 className='text-slate-500 mt-9 font-bold'>{blog.time} min read</h1>
-                    <button onClick={()=>addToBookmark(blog.title)}><FontAwesomeIcon icon={faBookmark} /></button>
+                    <button onClick={() => addToBookmark(blog.title)}><FontAwesomeIcon icon={faBookmark} /></button>
                 </div>
             </div>
 
 
             <h1 className='text-3xl font-bold mt-8'>{blog.title}</h1>
-           <button onClick={()=>handleWatchTime(blog.time)} className='btn-mark my-10 font-bold text-purple-700'>Mark as read</button>
-           <hr />
-          
-           
+            <button onClick={() => handleWatchTime(blog.time)} className='btn-mark my-10 font-bold text-purple-700'>Mark as read</button>
+            <hr />
+
+
         </div>
     );
-};
+}
 
 export default BlogCart;
