@@ -19,7 +19,7 @@ useEffect(()=>{
         </div>
 
         <div className='mt-5 bg-slate-200 text-lg font-bold p-5 w-full h-1/3 rounded-lg'>
-            <h1>Bookmarked Blogs : </h1>
+            <h1>Bookmarked Blogs : {titles.length}</h1>
             <p className='mt-14'>{titles}</p>
         </div>
            
